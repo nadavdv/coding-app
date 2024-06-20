@@ -61,6 +61,10 @@ document.addEventListener('click', function() {
 // tracking current code
 const serverCode = { 1: "", 2: "", 3: "", 4: "" };
 
+app.get('/', (req, res) => {
+  res.send('Server is up and running!');
+});
+
 // inside io.on('connection', ...)
 io.on("connection", (socket) => {
   // console.log(`a user connected: ${socket.id}`);
