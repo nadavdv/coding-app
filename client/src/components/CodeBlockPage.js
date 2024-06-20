@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { json, useParams } from "react-router-dom";
 import Editor from "@monaco-editor/react";
 import { Link } from "react-router-dom";
 import { socket } from "../App";
@@ -75,6 +75,11 @@ const CodeBlockPage = () => {
     if (role === "student") {
       socket.emit("code-change", { codeBlockId: id, code: newCode });
     }
+
+    console.log("------new code--------")
+    console.log(JSON.stringify(newCode))
+    console.log("------solution--------")
+    console.log(JSON.stringify(solutions[id]))
   };
 
   // handle back to lobby event
