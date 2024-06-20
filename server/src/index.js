@@ -47,7 +47,7 @@ function getData() {
    - Log a message to the console when the document is clicked.
 */
 document.addEventListener('click', function() {
-  // Your code here
+    // Your code here
 });`,
   4: `/* Task: Write a function to greet a user by name.
   - The function should take a 'name' parameter.
