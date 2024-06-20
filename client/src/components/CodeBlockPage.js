@@ -60,7 +60,7 @@ const CodeBlockPage = () => {
     socket.on("code-update", (newCode) => {
       setCode(newCode);
     });
-  }, [mySocket]);
+  }, [mySocket, id]);
 
   // handle code change event
   const handleCodeChange = (newCode) => {
