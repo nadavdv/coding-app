@@ -8,12 +8,12 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://coding-app-production.up.railway.app", // allow requests from the frontend
+    // origin: "https://coding-app-production.up.railway.app", // allow requests from the frontend
     methods: ["GET", "POST"],
   },
 });
 
-const PORT = process.env.PORT || 65090;
+const PORT = process.env.PORT || 3001;
 
 // user's {mentor : socket id} on each room
 const users = {
