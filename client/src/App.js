@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import LobbyPage from "./components/LobbyPage.js";
 import CodeBlockPage from "./components/CodeBlockPage.js";
 
-export const socket = io("https://api.render.com/deploy/srv-cpq6hb9u0jms738q6d8g?key=xFWhkZCvBVM"); // Connect to backend server
+export const socket = io("https://coding-app-3bsu.onrender.com"); // Connect to backend server
 
 function App() {
   return (
