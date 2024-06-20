@@ -1,0 +1,42 @@
+const realsol =
+ {
+    1: `/* Task: Write an asynchronous function to fetch data from a URL.
+   - Use the Fetch API to make the request.
+   - Use 'await' to wait for the response and convert it to JSON.
+   - Return the fetched data.
+*/
+async function fetchData(url) {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}`,
+2:`/* Task: Write a function that returns a promise which resolves after a delay.
+   - Use 'setTimeout' to simulate a delay.
+   - Resolve the promise with a success message after 2 seconds.
+   - Reject the promise with an error message if there's an error.
+*/
+function getData() {
+  return new Promise((resolve, reject) => {
+    try {
+      setTimeout(() => {
+        resolve("Success!");
+      }, 2000);
+    } catch (error) {
+      reject("An error occurred: " + error.message);
+    }
+  });
+}`,
+3:`/* Task: Add an event listener to the document for the 'click' event.
+   - Log a message to the console when the document is clicked.
+*/
+document.addEventListener('click', function() {
+  console.log("Document clicked!");
+});`,
+4:`/* Task: Write a function to greet a user by name.
+   - The function should take a 'name' parameter.
+   - Log a greeting message to the console.
+*/
+function greet(name) {
+  console.log("Hello" + name);
+}`
+  }
