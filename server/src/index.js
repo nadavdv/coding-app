@@ -8,7 +8,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // allow requests from the frontend
+    origin: "https://coding-app-production.up.railway.app/", // allow requests from the frontend
     methods: ["GET", "POST"],
   },
 });
