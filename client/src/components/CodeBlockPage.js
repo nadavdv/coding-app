@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Editor from "@monaco-editor/react";
 import { Link } from "react-router-dom";
 import { socket } from "../App";
@@ -15,21 +15,8 @@ const CodeBlockPage = () => {
   const solutions = {
     1: "/* Task: Write an asynchronous function to fetch data from a URL.\r\n   - Use the Fetch API to make the request.\r\n   - Use 'await' to wait for the response and convert it to JSON.\r\n   - Return the fetched data.\r\n*/\r\nasync function fetchData(url) {\r\n  const response = await fetch(url);\r\n  const data = await response.json();\r\n  return data;\r\n}",
     2: '/* Task: Write a function that returns a promise which resolves after a delay.\r\n   - Use \'setTimeout\' to simulate a delay.\r\n   - Resolve the promise with a success message after 2 seconds.\r\n   - Reject the promise with an error message if there\'s an error.\r\n*/\r\nfunction getData() {\r\n  return new Promise((resolve, reject) => {\r\n    try {\r\n      setTimeout(() => {\r\n        resolve("Success!");\r\n      }, 2000);\r\n    } catch (error) {\r\n      reject("An error occurred: " + error.message);\r\n    }\r\n  });\r\n}',
-    8: "/* Task: Add an event listener to the document for the 'click' event.\r\n   - Log a message to the console when the document is clicked.\r\n*/\r\ndocument.addEventListener('click', function() {\r\n  console.log(\"Document clicked!\");\r\n});",
-    7: "/* Task: Write a function to greet a user by name.\r\n   - The function should take a 'name' parameter.\r\n   - Log a greeting message to the console.\r\n*/\r\nfunction greet(name) {\r\n  console.log(\"Hello\" + name);\r\n}",
-    4:`/* Task: Write a function to greet a user by name.
-  - The function should take a 'name' parameter.
-  - Log a greeting message to the console.
-  */
- function greet(name) {
-  console.log("Hello " + name);
-  }`,
-  3:`/* Task: Add an event listener to the document for the 'click' event.
-   - Log a message to the console when the document is clicked.
-*/
-document.addEventListener('click', function() {
-    console.log("Document clicked!");
-});`
+    3: "/* Task: Add an event listener to the document for the 'click' event.\r\n   - Log a message to the console when the document is clicked.\r\n*/\r\ndocument.addEventListener('click', function() {\r\n  console.log(\"Document clicked!\");\r\n});",
+    4: "/* Task: Write a function to greet a user by name.\r\n   - The function should take a 'name' parameter.\r\n   - Log a greeting message to the console.\r\n*/\r\nfunction greet(name) {\r\n  console.log(\"Hello\" + name);\r\n}",
   };
 
   useEffect(() => {
@@ -81,11 +68,6 @@ document.addEventListener('click', function() {
     if (role === "student") {
       socket.emit("code-change", { codeBlockId: id, code: newCode });
     }
-
-    console.log("------new code--------")
-    console.log(JSON.stringify(newCode))
-    console.log("------solution--------")
-    console.log(JSON.stringify(solutions[id]))
   };
 
   // handle back to lobby event
