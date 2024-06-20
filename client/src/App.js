@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import LobbyPage from "./components/LobbyPage.js";
 import CodeBlockPage from "./components/CodeBlockPage.js";
 
-export const socket = io("https://zooming-vibrancy-production.up.railway.app/"); // Connect to backend server
+export const socket = io("https://zooming-vibrancy-production.up.railway.app"); // Connect to backend server
 
 function App() {
   return (
