@@ -1,1 +1,1 @@
-Assignment URL: https://coding-app-production.up.railway.app/
+Assignment URL: https://coding-app-zeta.vercel.app/
