@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Apply the font to the entire application */
+body, html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url('../public/background2.jpg'); /* Adjust the path as per your folder structure */
+  background-size: cover; /* Cover the entire background */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  /* Optionally, you can add more properties like background-position, etc. */
+}
+
+.center {
+    text-align: center;
+    color:white
+  }
+
+.centered-ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0 auto; /* Centers horizontally */
+  display: table; /* Ensure the width is constrained to the content */
+}
+
+/* Optional: Additional styles for list items */
+.centered-ul li {
+  padding: 5px 0; /* Add some space between list items */
+}
+
+/* Style the links within the list */
+.centered-ul .styled-link {
+  display: block;           /* Use block display for full width */
+  width: 250px;             /* Set a fixed width */
+  padding: 15px;            /* Space inside the link */
+  margin: 1px auto;        /* Center the links and add vertical space */
+  background-color: #b74be58e; /* Green background */
+  color: white;             /* White text */
+  text-decoration: none;    /* Remove underline */
+  border-radius: 5px;       /* Rounded corners */
+  font-size: 20px;          /* Font size */
+  text-align: center;       /* Center the text */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+/* Hover effect for the links */
+.centered-ul .styled-link:hover {
+  background-color: #d583f9;  /* Darker green on hover */
+}
+/* Optional: Style the links */
+.centered-ul a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use inherited text color */
+}
+
+.centered-container {
+  display: flex;          /* Use Flexbox */
+  flex-direction: column; /* Align items vertically */
+  align-items: center;    /* Center items horizontally */
+  justify-content: center;/* Center items vertically (if parent has height) */
+  text-align: center;     /* Center text inside child elements */
+  padding: 20px;          /* Optional: Padding around the content */
+}
+
+.centered-container h1 {
+  margin-bottom: 20px;    /* Optional: Space below the title */
+  color:white
+}
+
+.centered-container .editor {
+  margin: 20px 0;         /* Optional: Space around the editor */
+}
+
+.centered-container img {
+  margin-top: 20px;       /* Space above the image */
+}
+
+.centered-container .styled-link {
+  display: inline-block;      /* Allows padding and margins */
+  padding: 10px 20px;         /* Space inside the link */
+  margin: 10px 0;             /* Space outside the link */
+  background-color: #b74be58e;  /* Green background */
+  color: white;               /* White text */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 5px;         /* Rounded corners */
+  font-size: 16px;            /* Font size */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.centered-container .styled-link:hover {
+  background-color: #d583f9;  /* Darker green on hover */
+}
+
+/* Button styling */
+.centered-container .styled-button {
+  background-color: black;    /* Black background */
+  color: white;               /* White text */
+  border: none;               /* Remove default border */
+  padding: 10px 20px;         /* Space inside the button */
+  margin:  0;             /* Space outside the button */
+  border-radius: 5px;         /* Rounded corners */
+  font-size: 16px;            /* Font size */
+  cursor: pointer;            /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for the button */
+.centered-container .styled-button:hover {
+  background-color: #333;     /* Darker black on hover */
+  transform: scale(1.05);     /* Slight zoom effect */
+}
+
+/* Focus effect for the button */
+.centered-container .styled-button:focus {
+  outline: none;              /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Custom focus shadow */
+}
+
+
