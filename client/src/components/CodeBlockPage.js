@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { json, useParams } from "react-router-dom";
 import Editor from "@monaco-editor/react";
 import { Link } from "react-router-dom";
 import { socket } from "../App";
